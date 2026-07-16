@@ -3,112 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>π Generator Pro</title>
+    <title>π Digit Generator</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
+
 <body>
 
-    <!-- Animated Background -->
-    <div id="particles"></div>
+<div class="container">
 
-    <!-- Dark Mode Button -->
-    <button id="themeToggle">
-        <i class="fa-solid fa-moon"></i>
-    </button>
+    <h1>π Digit Generator</h1>
 
-    <!-- Main Card -->
-    <div class="container">
+    <p class="subtitle">
+        Generate π using a powerful Python backend
+    </p>
 
-        <h1>π Generator Pro</h1>
-        <p class="subtitle">
-            Generate digits of π instantly.
-        </p>
+    <div class="card">
 
-        <!-- Input -->
-        <div class="inputBox">
-            <input
-                type="number"
-                id="digits"
-                placeholder="Enter number of digits"
-                min="1">
+        <label>Enter Number of Digits</label>
 
-            <button id="generateBtn">
-                <i class="fa-solid fa-play"></i>
-                Generate
-            </button>
-        </div>
+        <input
+            type="number"
+            id="digits"
+            placeholder="Example: 1000">
 
-        <!-- Progress Circle -->
-        <div class="progressContainer">
+        <button id="generateBtn">
+            <i class="fa-solid fa-play"></i>
+            Generate π
+        </button>
 
-            <svg width="170" height="170">
+        <div class="loading" id="loading">
 
-                <circle
-                    class="bg"
-                    cx="85"
-                    cy="85"
-                    r="70"/>
+            <div class="spinner"></div>
 
-                <circle
-                    id="progressCircle"
-                    class="progress"
-                    cx="85"
-                    cy="85"
-                    r="70"/>
+            <p>Calculating π...</p>
 
-            </svg>
+            <div class="progress-bar">
 
-            <div id="progressText">
-                0%
+                <div class="progress" id="progress"></div>
+
             </div>
 
         </div>
 
-        <!-- Statistics -->
         <div class="stats">
 
-            <div class="card">
+            <div>
                 <h3>Digits</h3>
-                <p id="digitCount">0</p>
+                <span id="digitCount">0</span>
             </div>
 
-            <div class="card">
-                <h3>Status</h3>
-                <p id="status">Waiting...</p>
+            <div>
+                <h3>Time</h3>
+                <span id="timeTaken">0 s</span>
             </div>
 
         </div>
 
-        <!-- Search -->
-        <div class="searchBox">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search inside π">
-
-            <button id="searchBtn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-
-        </div>
-
-        <!-- Output -->
         <textarea
             id="output"
             placeholder="Generated π will appear here..."
-            readonly>
-        </textarea>
+            readonly></textarea>
 
-        <!-- Buttons -->
         <div class="buttons">
 
             <button id="copyBtn">
@@ -126,12 +89,18 @@
                 Download PDF
             </button>
 
+            <button id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+                Dark Mode
+            </button>
+
         </div>
 
     </div>
-<script src="https://cdn.jsdelivr.net/npm/decimal.js@10.4.3/decimal.min.js"></script>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
