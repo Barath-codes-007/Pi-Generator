@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>π Generator Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div id="particles"></div>
+
+    <!-- Dark Mode Button -->
+    <button id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- Main Card -->
+    <div class="container">
+
+        <h1>π Generator Pro</h1>
+        <p class="subtitle">
+            Generate digits of π instantly.
+        </p>
+
+        <!-- Input -->
+        <div class="inputBox">
+            <input
+                type="number"
+                id="digits"
+                placeholder="Enter number of digits"
+                min="1">
+
+            <button id="generateBtn">
+                <i class="fa-solid fa-play"></i>
+                Generate
+            </button>
+        </div>
+
+        <!-- Progress Circle -->
+        <div class="progressContainer">
+
+            <svg width="170" height="170">
+
+                <circle
+                    class="bg"
+                    cx="85"
+                    cy="85"
+                    r="70"/>
+
+                <circle
+                    id="progressCircle"
+                    class="progress"
+                    cx="85"
+                    cy="85"
+                    r="70"/>
+
+            </svg>
+
+            <div id="progressText">
+                0%
+            </div>
+
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats">
+
+            <div class="card">
+                <h3>Digits</h3>
+                <p id="digitCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Status</h3>
+                <p id="status">Waiting...</p>
+            </div>
+
+        </div>
+
+        <!-- Search -->
+        <div class="searchBox">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search inside π">
+
+            <button id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <!-- Output -->
+        <textarea
+            id="output"
+            placeholder="Generated π will appear here..."
+            readonly>
+        </textarea>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button id="copyBtn">
+                <i class="fa-solid fa-copy"></i>
+                Copy
+            </button>
+
+            <button id="txtBtn">
+                <i class="fa-solid fa-file-lines"></i>
+                Download TXT
+            </button>
+
+            <button id="pdfBtn">
+                <i class="fa-solid fa-file-pdf"></i>
+                Download PDF
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
