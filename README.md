@@ -19,6 +19,10 @@ A professional π digit generator built with:
 - Copy to Clipboard
 - Fast Chudnovsky Algorithm
 
+# π Digit Generator
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://barath-codes-007.github.io/Pi-Generator/)
+
 ## Deployment
 
 Frontend:
