@@ -363,3 +363,28 @@ min-width:100%;
 }
 
 }
+
+/* ---------- Light Theme ---------- */
+
+body.light{
+    background:#eef2ff;
+}
+
+body.light .container{
+    background:rgba(255,255,255,.85);
+    color:#111827;
+}
+
+body.light textarea,
+body.light input{
+    background:white;
+    color:black;
+}
+
+body.light .card{
+    background:#f8fafc;
+}
+
+body.light #themeToggle{
+    color:black;
+}
