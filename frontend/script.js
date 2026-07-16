@@ -1,5 +1,4 @@
 const API_URL = "https://pi-generator-apg0.onrender.com";
-
 const digits = document.getElementById("digits");
 const output = document.getElementById("output");
 const generateBtn = document.getElementById("generateBtn");
