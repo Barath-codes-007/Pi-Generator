@@ -1,4 +1,4 @@
-const API_URL = "https://YOUR-RENDER-BACKEND.onrender.com";
+const API_URL = "https://pi-generator-apg0.onrender.com";
 
 const digits = document.getElementById("digits");
 const output = document.getElementById("output");
